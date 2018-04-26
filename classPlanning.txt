@@ -1,0 +1,35 @@
+Board class -- holds game state
+	fields: int[6] pitsPlay1
+		int[6] pitsPlay2
+		int storePlay1
+		int storePlay2
+	methods:
+		< none >
+
+Manager class -- this is the only class that can change the board state
+	fields:
+		User player1
+		AIuser player2
+		Board currBoard
+		Window guiWindow
+	methods:
+		int getMove(User)
+		int getMove(AIuser)
+		bool isValidMove(int)
+		string checkWinner()
+		void printStateInfo()
+		
+
+
+AIuser class --makes random moves for now, later will need a Board field, a gameTree field and helper methods for makeMove()
+	fields:
+		< none >
+	methods:
+		int getMove()	
+
+User class -- gets moves from the user
+	fields:
+		string name
+		
+	methods:
+		int getMove()	
